@@ -120,8 +120,8 @@ setInterval(() => clients().forEach(c => { if (!c.alive) return c.sock.destroy()
 server.listen(PORT, '0.0.0.0', () => {
   const ifs = require('os').networkInterfaces(), ips = [];
   Object.values(ifs).forEach(l => l.forEach(i => { if (i.family === 'IPv4' && !i.internal) ips.push(i.address); }));
-  console.log('\n  School Defender — servidor multiplayer rodando!\n');
+  console.log('\n  NOME — servidor multiplayer rodando!\n'); //MUDAR NOME PARA O NOME
   console.log('  Neste PC:        http://localhost:' + PORT);
-  ips.forEach(ip => console.log('  Rede/VPN:        http://' + ip + ':' + PORT));
+  ips.forEach(ip => console.log('  Rede/VPN:        http://' + ip + ':' + PORT)); //em tese funciona ainda
   console.log('\n  Ctrl+C para parar.\n');
 });
